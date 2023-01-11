@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@solana/spl-token": "^0.3.5",
+    "@solana/web3.js": "^1.66.2",
+    "@solflare-wallet/sdk": "^1.0.12",
+    "bn.js": "^5.2.0",
+    "body-parser": "^1.19.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "csurf": "^1.11.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "express-ws": "^5.0.2",
+    "tweetnacl": "^1.0.3",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "start": "node ./target/main.js",
+    "watch": "shadow-cljs watch app",
+    "compile": "shadow-cljs compile app",
+    "release": "shadow-cljs release app && ncc build target/transactor.release.js -m"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.4",
+    "shadow-cljs": "^2.20.5"
+  }
+}
